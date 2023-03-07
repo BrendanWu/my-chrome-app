@@ -1,16 +1,18 @@
 function getword(info, tab) {
   console.log("Word " + info.selectionText + " was clicked.");
+  //this code is used for set text on localstorage DB later for render we can get into popup.html
+  window.localStorage.setItem('selectionText', info.selectionText)
   console.log(info, tab);
   // Create a new window at the location of the context menu click
-  chrome.runtime.sendMessage({ text: info.selectionText }, function(response) {
+  chrome.runtime.sendMessage({ text: info.selectionText }, function (response) {
     chrome.windows.create({
-        url: "popup.html",
-        type: "popup",
-        width: 250,
-        height: 500,
-        left: info.menuX,
-        top: info.menuY,
-      });
+      url: "popup.html",
+      type: "popup",
+      width: 250,
+      height: 500,
+      left: info.menuX,
+      top: info.menuY,
+    });
   });
 }
 

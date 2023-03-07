@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-  // If the message contains selected text, display it
-  if (message.text) {
-    var div = document.createElement("div");
-    div.style.position = "fixed";
-    div.style.top = "10px";
-    div.style.right = "10px";
-    div.style.backgroundColor = "#fff";
-    div.style.border = "1px solid #000";
-    div.style.padding = "10px";
-    div.style.zIndex = "9999";
-    div.textContent = message.text;
-    document.body.appendChild(div);
-  }
-});
+  chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+    // If the message contains selected text, display it
+    if (message.text) {
+      var div = document.createElement("div");
+      div.style.position = "fixed";
+      div.style.top = "10px";
+      div.style.right = "10px";
+      div.style.backgroundColor = "#fff";
+      div.style.border = "1px solid #000";
+      div.style.padding = "10px";
+      div.style.zIndex = "9999";
+      div.textContent = message.text;
+      document.body.appendChild(div);
+    }
+  });
 
   var submitBtn = document.getElementById("submitBtn");
   submitBtn.addEventListener("click", function () {
@@ -41,3 +41,8 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     xhr.send(JSON.stringify(data));
   });
 });
+
+var responseContainer_selected_text = document.getElementById("responseContainer");
+// this code is used for getting the selected text from webpage whatever we have selected in context
+const get_selected_text = localStorage.getItem('selectionText');
+responseContainer_selected_text.innerText = get_selected_text;
