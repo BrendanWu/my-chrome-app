@@ -10,8 +10,8 @@ function getword(info, tab) {
       type: "popup",
       width: 250,
       height: 500,
-      left: info.menuX,
-      top: info.menuY,
+      left: (screen.width / 1) - (250 / 2),
+      top: (screen.height / 2) - (500 / 2),
     });
   });
 }
