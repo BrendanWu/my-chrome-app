@@ -1,0 +1,19 @@
+{
+  "name": "DVL AI",
+  "description": "Your recruiter AI",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["http://localhost:4000/*", "contextMenus"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "128": "icon128.png"
+  },
+  "background": { 
+    "scripts": ["script.js"]
+  }
+}
