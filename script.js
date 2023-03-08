@@ -8,17 +8,17 @@ function getword(info, tab) {
     chrome.windows.create({
       url: "popup.html",
       type: "popup",
-      width: 250,
-      height: 500,
-      left: (screen.width / 1) - (250 / 2),
-      top: (screen.height / 2) - (500 / 2),
+      width: 350,
+      height: 800,
+      left: (screen.width / 1) - (350 / 2),
+      top: (screen.height / 2) - (800 / 2),
     });
   });
 }
 
 chrome.contextMenus.create({
-  title: "DVL reply %s",
-  contexts: ["selection"],
+  title: "DVL %s",
+  contexts: ["all"],
   onclick: getword,
 });
 
