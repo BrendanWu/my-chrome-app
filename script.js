@@ -8,9 +8,9 @@ function getword(info, tab) {
     chrome.windows.create({
       url: "popup.html",
       type: "popup",
-      width: 600,
+      width: 500,
       height: 500,
-      left: 630,
+      left: 730,
       top: 65,
       // left: (screen.width / 1) - (250 / 1),
       // top: (screen.height / 2) - (500 / 1),

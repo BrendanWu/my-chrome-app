@@ -1,64 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>DVL AI</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <style>
-      /* Set a background color */
-      body {
-        background-color: #f1f1f1;
-        width:500px;
-        height:800px;
-      }
 
-      /* Style the input field */
-      #inputField {
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: none;
-        border-radius: 4px;
-        background-color: #ffffff;
-        font-size: 16px;
-        color: #555;
-        width: 50%;
-      }
+<head>
+  <title>DVL AI</title>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script> -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
 
-      /* Style the submit button */
-      #submitBtn {
-        background-color: #4CAF50;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 30%;
-      }
+    /* Set a background color */
+    body {
+      background-color: #f1f1f1;
+      width: 500px;
+      height: 800px;
+    }
 
-      /* Change the submit button color on hover */
-      #submitBtn:hover {
-        background-color: #45a049;
-      }
+    /* Style the input field */
+    #inputField {
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 4px;
+      background-color: #ffffff;
+      font-size: 16px;
+      color: #555;
+      width: 50%;
+    }
 
-      /* Style the response container */
-      #responseContainer {
-        padding: 16px;
-        margin-top: 16px;
-        background-color: #fff;
-        color: #555;
-        border-radius: 4px;
-      }
-    </style>
-  </head>
-  <body class="bg-gray">
+    /* Style the submit button */
+    #submitBtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 30%;
+    }
+
+    /* Change the submit button color on hover */
+    #submitBtn:hover {
+      background-color: #45a049;
+    }
+
+    /* Style the response container */
+    #responseContainer {
+      padding: 16px;
+      margin-top: 16px;
+      background-color: #fff;
+      color: #555;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    .inner-container {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0px;
+    }
+
+    #submitBtn {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body class="bg-gray">
+  <div class="inner-container">
     <h1 class="text-3xl font-bold underline">
       DVL
     </h1>
     Selected text
     <div id="selectContainer"></div>
-    <input type="text" id="inputField">
-    <button id="submitBtn">Submit</button>
+    <div class="form-container">
+      <input type="text" id="inputField">
+      <button id="submitBtn">Submit</button>
+    </div>
     <div id="responseContainer"></div>
-    <script src="popup.js"></script>
-  </body>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
 </html>
