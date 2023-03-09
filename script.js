@@ -8,10 +8,12 @@ function getword(info, tab) {
     chrome.windows.create({
       url: "popup.html",
       type: "popup",
-      width: 350,
-      height: 800,
-      left: (screen.width / 1) - (350 / 2),
-      top: (screen.height / 2) - (800 / 2),
+      width: 600,
+      height: 500,
+      left: 630,
+      top: 65,
+      // left: (screen.width / 1) - (250 / 1),
+      // top: (screen.height / 2) - (500 / 1),
     });
   });
 }
